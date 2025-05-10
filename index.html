@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mon CLI Web</title>
+  <link rel="stylesheet" href="https://unpkg.com/termynal@0.0.1/termynal.css">
+  <style>
+    body { background: #000; color: #0f0; font-family: monospace; padding: 2em; }
+    .file-content { white-space: pre; }
+  </style>
+</head>
+<body>
+
+  <div id="termynal" data-termynal>
+    <span data-ty="input">menu</span>
+    <span data-ty>Bienvenue dans mon CLI web !</span>
+    <span data-ty>Commandes disponibles : less fichier.txt</span>
+    <span data-ty="input">less fichier.txt</span>
+    <span data-ty class="file-content">
+Ligne 1 du fichier
+Ligne 2 du fichier
+Ligne 3 du fichier
+Ligne 4 du fichier
+(Les 4 premières lignes affichées par less...)
+    </span>
+    <span data-ty="input">exit</span>
+    <span data-ty>Au revoir !</span>
+  </div>
+
+  <script src="https://unpkg.com/termynal@0.0.1/termynal.js"></script>
+  <script>
+    new Termynal('#termynal', {
+      startDelay: 500,
+      typeDelay: 30,
+      lineDelay: 500,
+    });
+  </script>
+
+</body>
+</html>
+
